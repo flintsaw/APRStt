@@ -1,31 +1,41 @@
-APRStt - Touch Tone interface to the Automatic Packet Reporting System (APRS)
-Information here is modified for brevity and clarity from the version 2.3 user guide (http://www.aprs.org/aprstt/aprstt-user.txt)
+K3KDW-12 (HT Symbol) A5B35B3A9A74#
 
-"A" - CALLSIGN  (FCC calls, callsign suffixes, or tactical calls)
-"B" - POSITIONS (pre-loaded or manually entered)
-"C" - COMMENT   (comments or local voice freq you are monitoring
-"D" - MESSAGES  (commonly used text messages for you or your family
++------------------+
+| 1    2    3   A  |
+|     ABC  DEF     |
+| 4    5    6   B  |
+|GHI  JKL  MNO     |
+| 7    8    9   C  |
+|PQRS TUV WXYZ     |
+| *    0    #   D  |
++------------------+
 
-Send position, comment, or message with a * before callsign. For example a message might be Dxxx*Axxx#
+"A" - CALLSIGN (FCC calls, callsign suffixes, or tactical calls)
+"B" - POSITIONS (Requires special configuration and coordination with    users to work properly)
+"C" - COMMENT (comments or local voice freq you are monitoring
+  Cnnnnnn* Exactly 6 numbers will be displayed as a frequency
+“D” – MESSAGES are not currently implemented
 
-+------------------+  The standard TouchTone Key pad has letter
-| 1    2    3   A  |  definitions for each key that we use for 
-|     ABC  DEF     |  APRStt. For callsigns, we use the two-key
-| 4    5    6   B  |  method where you first press the key associated 
-|GHI  JKL  MNO     |  with the letter, and then press the A, B, C 
-| 7    8    9   C  |  or D key depending on whether the letter is 
-|PQRS TUV WXYZ     |  listed first, second, third or forth on that 
-| *    0    #   D  |  key. A key alone is the actual digit.  The * 
-|                  |  key is often used as a delimiter (,./) and # 
-+------------------+  ends a string.  
+CALLSIGNs are encoded using the number key and A,B,C, or D to select the position of the desired character. Numbers with no modifiers represent numbers.
+The * key is often used as a delimiter (,./) and # ends a string.  
 
 SAMPLE CONVERSION: A5B35B3A9A74#
 A-Indicates a Callsign will follow
 5b-K
-3-3
+3 -3
 5b-K
 3a-D
 9a-W
-7- Symbol overlay
-4-checksum (FOR CALLSIGNS ONLY. The checksum is the last digit of the sum of each character. 0-9 and face value and A=10, B=11, C=12, and D=13)
+7-“HT” Symbol overlay
+4-Checksum (FOR CALLSIGNS ONLY. The checksum is the last digit of the sum of each character. 0-9 and face value and A=10, B=11, C=12, and D=13)
 
+COMMENTS are initiated by a “C” and terminated with a * which indicates a callsign is to follow.
+
+Comments can include the Flintsaw Carrier-PiGeon messaging scheme in place of maidenhead locators or longer comments. (https://github.com/flintsaw/carrier-pigeon)
+
+SAMPLE CONVERSION: C44A444*
+C -Indicates a Comment will follow
+44-Types “H”
+A –Separates letters using the same input
+44-Types “I”
+*-Ends ends the comment and indicates a callsign will follow
