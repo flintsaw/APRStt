@@ -1,4 +1,4 @@
-K3KDW-12 (HT Symbol) A5B35B3A9A74#
+K3KDW-12 (HT Symbol) A5B35B3A9A74
 
 +------------------+
 | 1    2    3   A  |
@@ -10,32 +10,38 @@ K3KDW-12 (HT Symbol) A5B35B3A9A74#
 | *    0    #   D  |
 +------------------+
 
+The * key is a delimiter between message types and # ends a string. The order of message types does not matter so long as they are separated by a * and the final character is a #
+
 "A" - CALLSIGN (FCC calls, callsign suffixes, or tactical calls)
-"B" - POSITIONS (Requires special configuration and coordination with    users to work properly)
-"C" - COMMENT (comments or local voice freq you are monitoring
-  Cnnnnnn* Exactly 6 numbers will be displayed as a frequency
-“D” – MESSAGES are not currently implemented
+"B" - POSITION (Requires special configuration and coordination with users to work properly)
+"C" - COMMENT (See below)
+“D” – MESSAGE (Not currently implemented)
+
+Partially completed transmissions will time out after 5 seconds of inactivity. If you make a mistake just wait and try again.
 
 CALLSIGNs are encoded using the number key and A,B,C, or D to select the position of the desired character. Numbers with no modifiers represent numbers.
-The * key is often used as a delimiter (,./) and # ends a string.  
 
 SAMPLE CONVERSION: A5B35B3A9A74#
 A-Indicates a Callsign will follow
-5b-K
-3 -3
-5b-K
-3a-D
-9a-W
-7-“HT” Symbol overlay
-4-Checksum (FOR CALLSIGNS ONLY. The checksum is the last digit of the sum of each character. 0-9 and face value and A=10, B=11, C=12, and D=13)
+5b        -K
+3         -3
+5b        -K
+3a        -D
+9a        -W
+7         -“HT” Symbol overlay
+4         -Checksum (FOR CALLSIGNS ONLY. The checksum is the last digit of the sum of each character. 0-9 and face value and A=10, B=11, C=12, and D=13)
 
 COMMENTS are initiated by a “C” and terminated with a * which indicates a callsign is to follow.
+Cnnnnnn* (6 numbers) is a Frequency
+Cnnn* (3 numbers) is a Tone
 
 Comments can include the Flintsaw Carrier-PiGeon messaging scheme in place of maidenhead locators or longer comments. (https://github.com/flintsaw/carrier-pigeon)
 
 SAMPLE CONVERSION: C44A444*
-C -Indicates a Comment will follow
-44-Types “H”
-A –Separates letters using the same input
-44-Types “I”
-*-Ends ends the comment and indicates a callsign will follow
+C         -Indicates a Comment will follow
+44        -Types “H”
+A Buttom  –Separates letters using the same input
+444        -Types “I”
+*         -Ends ends the comment and indicates a callsign will follow
+
+Credit to WB4APR (APRS) and WB2OSZ (Direwolf) for the excellent work that makes this possible!
