@@ -1,0 +1,31 @@
+APRStt - Touch Tone interface to the Automatic Packet Reporting System (APRS)
+Information here is modified for brevity and clarity from the version 2.3 user guide (http://www.aprs.org/aprstt/aprstt-user.txt)
+
+"A" - CALLSIGN  (FCC calls, callsign suffixes, or tactical calls)
+"B" - POSITIONS (pre-loaded or manually entered)
+"C" - COMMENT   (comments or local voice freq you are monitoring
+"D" - MESSAGES  (commonly used text messages for you or your family
+
+Send position, comment, or message with a * before callsign. For example a message might be Dxxx*Axxx#
+
++------------------+  The standard TouchTone Key pad has letter
+| 1    2    3   A  |  definitions for each key that we use for 
+|     ABC  DEF     |  APRStt. For callsigns, we use the two-key
+| 4    5    6   B  |  method where you first press the key associated 
+|GHI  JKL  MNO     |  with the letter, and then press the A, B, C 
+| 7    8    9   C  |  or D key depending on whether the letter is 
+|PQRS TUV WXYZ     |  listed first, second, third or forth on that 
+| *    0    #   D  |  key. A key alone is the actual digit.  The * 
+|                  |  key is often used as a delimiter (,./) and # 
++------------------+  ends a string.  
+
+SAMPLE CONVERSION: A5B35B3A9A74#
+A-Indicates a Callsign will follow
+5b-K
+3-3
+5b-K
+3a-D
+9a-W
+7- Symbol overlay
+4-checksum (FOR CALLSIGNS ONLY. The checksum is the last digit of the sum of each character. 0-9 and face value and A=10, B=11, C=12, and D=13)
+
