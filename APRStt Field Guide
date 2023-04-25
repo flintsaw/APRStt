@@ -31,7 +31,7 @@ A-Indicates a Callsign will follow
 7         -“HT” Symbol overlay
 4         -Checksum (FOR CALLSIGNS ONLY. The checksum is the last digit of the sum of each character. 0-9 and face value and A=10, B=11, C=12, and D=13)
 
-COMMENTS are initiated by a “C” and terminated with a * which indicates a callsign is to follow.
+COMMENTS are initiated by a “C” and terminated with a * if a callsign is next or # if the callsign has already been entered. 0 is a space.
 Cnnnnnn* (6 numbers) is a Frequency
 Cnnn* (3 numbers) is a Tone
 
